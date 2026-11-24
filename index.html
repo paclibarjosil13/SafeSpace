@@ -1,0 +1,259 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SafeSpace | A Safer Place to Speak</title>
+<style>
+:root{--navy:#10243a;--navy2:#173650;--teal:#19a89b;--teal2:#e5f7f5;--ink:#243447;--muted:#68798b;--bg:#f4f8fb;--white:#fff;--line:#e2eaf0;--red:#c74646;--gold:#b7791f}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--ink);line-height:1.6}button,input,select,textarea{font:inherit}button{cursor:pointer;border:0}.hidden{display:none!important}.navbar{height:auto;min-height:72px;background:var(--white);display:flex;align-items:center;justify-content:space-between;padding:14px 7%;box-shadow:0 2px 14px #10243a0c;position:sticky;top:0;z-index:20}.brand{font-size:22px;font-weight:800;color:var(--navy);letter-spacing:.2px}.brand span{color:var(--teal)}.navlinks{display:flex;gap:24px;align-items:center;flex-wrap:wrap}.navlinks a{color:var(--ink);text-decoration:none;font-size:14px;font-weight:600}.navlinks a:hover{color:var(--teal)}.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 20px;border-radius:9px;background:var(--teal);color:white;font-weight:700;text-decoration:none;transition:.2s}.btn:hover{filter:brightness(.94);transform:translateY(-1px)}.btn-outline{background:transparent;color:var(--teal);border:1px solid var(--teal)}.btn-dark{background:var(--navy)}.btn-small{padding:8px 12px;font-size:13px}.hero{background:linear-gradient(120deg,#10243aee,#173e55e8),radial-gradient(circle at 80% 20%,#19a89b,transparent 35%);color:white;padding:92px 7% 100px}.hero-inner{max-width:1100px;margin:auto}.eyebrow{color:#83e2d8;font-weight:700;text-transform:uppercase;letter-spacing:2px;font-size:12px}.hero h1{font-size:clamp(36px,6vw,58px);line-height:1.12;max-width:720px;margin:16px 0}.hero p{font-size:18px;color:#d7e5ec;max-width:620px;margin-bottom:28px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap}.hero .btn-outline{color:white;border-color:#ffffff80}.section{padding:70px 7%;}.section-inner{max-width:1100px;margin:auto}.section h2{text-align:center;color:var(--navy);font-size:32px;margin:0 0 12px}.section-lead{text-align:center;color:var(--muted);max-width:680px;margin:0 auto 38px}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.card{background:white;border:1px solid var(--line);border-radius:15px;padding:25px;box-shadow:0 8px 24px #10243a08}.card-icon{width:48px;height:48px;border-radius:13px;background:var(--teal2);display:grid;place-items:center;font-size:23px}.card h3{color:var(--navy);margin:16px 0 8px}.card p{color:var(--muted);margin:0}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.step-num{font-size:28px;color:var(--teal);font-weight:800}.soft{background:#edf5f7}.cta{background:var(--navy);color:white;text-align:center;padding:58px 7%}.cta h2{color:white}.cta p{color:#c9d8e2}.footer{padding:28px 7%;background:#0b1c2d;color:#c4d2dc;text-align:center;font-size:13px}.auth-wrap{min-height:calc(100vh - 72px);display:grid;place-items:center;padding:35px 16px;background:linear-gradient(130deg,#eaf5f5,#f4f8fb)}.auth-card{width:min(460px,100%);background:white;border:1px solid var(--line);border-radius:17px;padding:30px;box-shadow:0 15px 45px #10243a14}.auth-card h2{color:var(--navy);margin:0 0 5px}.muted{color:var(--muted)}.field{margin:14px 0}.field label{display:block;font-weight:700;font-size:13px;margin-bottom:6px;color:#33475b}.field input,.field select,.field textarea{width:100%;padding:12px 13px;border:1px solid #d6e0e8;border-radius:8px;background:white;color:var(--ink);outline:none}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--teal);box-shadow:0 0 0 3px #19a89b18}.field textarea{min-height:115px;resize:vertical}.full{width:100%}.switchline{text-align:center;margin-top:18px;font-size:14px}.linkbtn{background:none;color:var(--teal);font-weight:700;padding:0}.notice{padding:11px 13px;border-radius:8px;margin:12px 0;font-size:14px;display:none}.notice.show{display:block}.notice.error{background:#fff0f0;color:#a52d2d}.notice.success{background:#e8f8f1;color:#176b4c}.dashboard{min-height:100vh}.dash-top{background:var(--navy);color:white;padding:17px 5%;display:flex;justify-content:space-between;align-items:center;gap:12px}.dash-top .brand{color:white}.dash-layout{display:grid;grid-template-columns:235px 1fr;min-height:calc(100vh - 65px)}.sidebar{background:white;border-right:1px solid var(--line);padding:25px 16px}.sidebar h3{font-size:12px;text-transform:uppercase;color:#8291a0;letter-spacing:1.2px;padding:0 12px}.sidebtn{display:block;width:100%;text-align:left;background:transparent;padding:12px;border-radius:8px;color:#405469;font-weight:600;margin:4px 0}.sidebtn.active,.sidebtn:hover{background:var(--teal2);color:#087e75}.dash-main{padding:30px;max-width:1200px;width:100%;margin:auto}.dash-main h1{color:var(--navy);margin:0 0 5px}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:24px 0}.stat{background:white;border:1px solid var(--line);padding:20px;border-radius:12px}.stat strong{display:block;font-size:28px;color:var(--navy)}.stat span{color:var(--muted);font-size:13px}.panel{background:white;border:1px solid var(--line);border-radius:13px;padding:23px;margin:18px 0}.panel h2{color:var(--navy);font-size:21px;margin:0 0 15px}.report{border:1px solid var(--line);border-radius:10px;padding:16px;margin:12px 0;background:white}.report-head{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}.status{display:inline-block;border-radius:30px;padding:4px 10px;background:#fff4db;color:#8a5a08;font-size:12px;font-weight:700}.status.Resolved,.status.Closed{background:#e5f7ed;color:#187347}.status.Under-Review,.status.Referred-to-Counselor{background:#eaf1ff;color:#315c9b}.report p{margin:7px 0;color:#586b7d;white-space:pre-wrap}.report small{color:#8291a0}.report select{padding:8px;border:1px solid var(--line);border-radius:7px}.empty{padding:24px;text-align:center;color:var(--muted)}.top-actions{display:flex;gap:10px;align-items:center}.mobile-menu{display:none}
+@media(max-width:800px){.navlinks{gap:12px}.navlinks a{font-size:12px}.cards,.steps{grid-template-columns:1fr}.dash-layout{grid-template-columns:1fr}.sidebar{border-right:0;border-bottom:1px solid var(--line);display:flex;overflow-x:auto;padding:10px}.sidebar h3{display:none}.sidebtn{white-space:nowrap;width:auto}.dash-main{padding:20px 14px}.stats{grid-template-columns:1fr 1fr}.hero{padding:70px 7%}.navbar{padding:12px 5%}.navlinks a:not(.btn){display:none}}@media(max-width:430px){.stats{grid-template-columns:1fr}.dash-top{padding:14px}.dash-main{padding:17px 12px}.auth-card{padding:22px}}
+</style>
+</head>
+<body>
+<header class="navbar" id="publicNav">
+  <a class="brand" href="#" onclick="showHome();return false;">Safe<span>Space</span></a>
+  <nav class="navlinks">
+    <a href="#home" onclick="showHome()">Home</a><a href="#about" onclick="showHome()">About</a><a href="#services" onclick="showHome()">Services</a><a href="#how" onclick="showHome()">How It Works</a><button class="btn btn-small" onclick="showAuth('login')">Login</button>
+  </nav>
+</header>
+
+<main id="homePage">
+<section class="hero" id="home"><div class="hero-inner">
+  <div class="eyebrow">A safer place to speak</div>
+  <h1>Your voice matters. Your safety comes first.</h1>
+  <p>SafeSpace provides a confidential and accessible way to report concerns, seek support, and help build a safer community.</p>
+  <div class="hero-actions"><button class="btn" onclick="showAuth('register')">Get Started</button><button class="btn btn-outline" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">Learn More</button></div>
+</div></section>
+<section class="section" id="about"><div class="section-inner"><h2>About SafeSpace</h2><p class="section-lead">A reporting platform designed to make it easier for people to speak up and for authorized personnel to respond responsibly.</p><div class="cards">
+<div class="card"><div class="card-icon">🔒</div><h3>Confidential Reporting</h3><p>Submit concerns through a private account and choose whether your identity is shown in the report.</p></div>
+<div class="card"><div class="card-icon">🤝</div><h3>Supportive Environment</h3><p>Make it easier to raise concerns and request appropriate assistance without judgment.</p></div>
+<div class="card"><div class="card-icon">📋</div><h3>Report Monitoring</h3><p>Keep track of submitted reports and view status updates from authorized administrators.</p></div>
+</div></div></section>
+<section class="section soft" id="services"><div class="section-inner"><h2>Our Services</h2><p class="section-lead">Tools that help make reporting and follow-up organized and accessible.</p><div class="cards">
+<div class="card"><div class="card-icon">📝</div><h3>Submit a Report</h3><p>Describe an incident, provide its date and location, and submit it securely.</p></div>
+<div class="card"><div class="card-icon">📊</div><h3>Track Your Report</h3><p>Review your submitted reports and see their current status.</p></div>
+<div class="card"><div class="card-icon">🛡️</div><h3>Administrative Review</h3><p>Authorized administrators can review reports and update their progress.</p></div>
+</div></div></section>
+<section class="section" id="how"><div class="section-inner"><h2>How It Works</h2><p class="section-lead">A simple process from submission to follow-up.</p><div class="steps">
+<div class="card"><div class="step-num">01</div><h3>Create an Account</h3><p>Register or sign in to access the reporting area.</p></div>
+<div class="card"><div class="step-num">02</div><h3>Submit Your Concern</h3><p>Complete the report form with the information you can provide.</p></div>
+<div class="card"><div class="step-num">03</div><h3>Track the Status</h3><p>Return to your account to check updates to your report.</p></div>
+</div></div></section>
+<section class="cta"><h2>Your voice can make a difference.</h2><p>Speak up in a safe and organized way.</p><button class="btn" onclick="showAuth('register')">Start Reporting</button></section>
+</main>
+
+<section id="authPage" class="auth-wrap hidden">
+<div class="auth-card">
+<button class="linkbtn" onclick="showHome()">← Back to Home</button>
+<h2 id="authTitle">Welcome Back</h2><p class="muted" id="authSubtitle">Sign in to your SafeSpace account.</p>
+<div id="authNotice" class="notice"></div>
+<form id="loginForm">
+<div class="field"><label for="loginEmail">Email Address</label><input id="loginEmail" type="email" autocomplete="username" required></div>
+<div class="field"><label for="loginPassword">Password</label><input id="loginPassword" type="password" autocomplete="current-password" required></div>
+<button class="btn full" type="submit" id="loginButton">Login</button>
+</form>
+<form id="registerForm" class="hidden">
+<div class="field"><label for="registerName">Full Name</label><input id="registerName" type="text" autocomplete="name" required></div>
+<div class="field"><label for="registerEmail">Email Address</label><input id="registerEmail" type="email" autocomplete="email" required></div>
+<div class="field"><label for="registerPassword">Password (at least 6 characters)</label><input id="registerPassword" type="password" minlength="6" autocomplete="new-password" required></div>
+<button class="btn full" type="submit" id="registerButton">Create Account</button>
+</form>
+<div class="switchline"><span id="switchText">Don't have an account?</span> <button class="linkbtn" id="switchButton" onclick="toggleAuthMode()">Register</button></div>
+</div></section>
+
+<section id="userDashboard" class="dashboard hidden">
+<div class="dash-top"><a class="brand" href="#" onclick="return false;">Safe<span>Space</span></a><div class="top-actions"><span id="userGreeting">My Account</span><button class="btn btn-small btn-outline" onclick="logout()">Log Out</button></div></div>
+<div class="dash-layout"><aside class="sidebar"><h3>User Menu</h3>
+<button class="sidebtn active" onclick="userTab('overview',this)">Overview</button><button class="sidebtn" onclick="userTab('submit',this)">Submit Report</button><button class="sidebtn" onclick="userTab('myreports',this)">My Reports</button><button class="sidebtn" onclick="userTab('profile',this)">Profile</button></aside>
+<div class="dash-main">
+<div id="userOverview"><h1>Welcome to SafeSpace</h1><p class="muted">Your reporting dashboard.</p><div class="stats"><div class="stat"><strong id="userTotal">0</strong><span>Total reports</span></div><div class="stat"><strong id="userPending">0</strong><span>Pending reports</span></div><div class="stat"><strong id="userResolved">0</strong><span>Resolved / closed</span></div></div><div class="panel"><h2>Getting started</h2><p class="muted">If you have a concern, use Submit Report. You can return to My Reports to follow its status.</p><button class="btn" onclick="userTab('submit',document.querySelectorAll('.sidebtn')[1])">Submit a Report</button></div></div>
+<div id="userSubmit" class="hidden"><h1>Submit a Report</h1><p class="muted">Please provide accurate information. Fields marked required must be completed.</p><div class="panel"><div id="reportNotice" class="notice"></div><form id="reportForm">
+<div class="field"><label for="reportType">Type of Concern</label><select id="reportType" required><option value="">Select a category</option><option>Bullying</option><option>Harassment</option><option>Discrimination</option><option>Violence or Threat</option><option>Safety Concern</option><option>Other</option></select></div>
+<div class="field"><label for="incidentDate">Date of Incident</label><input id="incidentDate" type="date" required></div>
+<div class="field"><label for="reportLocation">Location</label><input id="reportLocation" type="text" placeholder="Where did it happen?" required></div>
+<div class="field"><label for="reportDescription">Description</label><textarea id="reportDescription" placeholder="Explain what happened..." required></textarea></div>
+<div class="field"><label><input id="anonymousChoice" type="checkbox" style="width:auto;margin-right:7px"> Submit with identity hidden from the report</label></div>
+<button class="btn" type="submit" id="submitReportButton">Submit Report</button></form></div></div>
+<div id="userMyreports" class="hidden"><h1>My Reports</h1><p class="muted">Reports submitted through your account.</p><div id="myReportsList" class="panel"><div class="empty">Loading reports...</div></div></div>
+<div id="userProfile" class="hidden"><h1>My Profile</h1><div class="panel"><p><b>Name:</b> <span id="profileName">—</span></p><p><b>Email:</b> <span id="profileEmail">—</span></p><p class="muted">Your sign-in details are managed securely by Firebase Authentication.</p></div></div>
+</div></div></section>
+
+<section id="adminDashboard" class="dashboard hidden">
+<div class="dash-top"><a class="brand" href="#" onclick="return false;">Safe<span>Space</span> Admin</a><div class="top-actions"><span>Administrator</span><button class="btn btn-small btn-outline" onclick="logout()">Log Out</button></div></div>
+<div class="dash-layout"><aside class="sidebar"><h3>Admin Menu</h3><button class="sidebtn active" onclick="adminTab('all',this)">All Reports</button><button class="sidebtn" onclick="adminTab('pending',this)">Pending</button><button class="sidebtn" onclick="adminTab('resolved',this)">Resolved / Closed</button></aside>
+<div class="dash-main"><h1>Admin Dashboard</h1><p class="muted">Review submitted concerns and update their status.</p><div class="stats"><div class="stat"><strong id="adminTotal">0</strong><span>Total reports</span></div><div class="stat"><strong id="adminPending">0</strong><span>Pending reports</span></div><div class="stat"><strong id="adminResolved">0</strong><span>Resolved / closed</span></div></div><div class="panel"><div class="report-head"><h2 id="adminListTitle">All Reports</h2><button class="btn btn-small" onclick="loadAdminReports()">Refresh</button></div><div id="adminNotice" class="notice"></div><div id="adminReportsList"><div class="empty">Loading reports...</div></div></div></div></div></section>
+
+<footer class="footer" id="publicFooter">© 2026 SafeSpace. A safer place to speak.</footer>
+
+<!-- Firebase COMPAT scripts: classic scripts rather than type="module", for wider HTML Editor preview compatibility. -->
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
+<script>
+(function(){
+"use strict";
+const firebaseConfig = {
+  apiKey: "AIzaSyBdO8gCvKSF558XlwFrwj9-urw8bLf9cxM",
+  authDomain: "safe-space-46451.firebaseapp.com",
+  projectId: "safe-space-46451",
+  storageBucket: "safe-space-46451.firebasestorage.app",
+  messagingSenderId: "179582231290",
+  appId: "1:179582231290:web:f7b8db19ba3b40c3cbdf43",
+  measurementId: "G-KF1GF5RXX6"
+};
+const ADMIN_UID = "K7RSg9NkR0ZymYtAcUnvsfUQ46f2";
+let auth = null, db = null, currentUser = null, cachedReports = [], authMode = "login", adminFilter = "all";
+
+function el(id){return document.getElementById(id)}
+function showNotice(id,message,type){
+ const n=el(id); if(!n)return; n.textContent=message; n.className="notice show "+(type||"error");
+}
+function hideNotice(id){const n=el(id);if(n)n.className="notice"}
+function hideAll(){
+ ["homePage","authPage","userDashboard","adminDashboard","publicFooter"].forEach(id=>el(id).classList.add("hidden"));
+ el("publicNav").classList.add("hidden");
+}
+function showHome(){
+ hideAll(); el("publicNav").classList.remove("hidden");el("homePage").classList.remove("hidden");el("publicFooter").classList.remove("hidden");
+ window.scrollTo(0,0);
+}
+function showAuth(mode){
+ hideAll();el("authPage").classList.remove("hidden");authMode=mode||"login";setAuthMode(authMode);window.scrollTo(0,0);
+}
+function setAuthMode(mode){
+ authMode=mode;
+ const login=mode==="login";
+ el("authTitle").textContent=login?"Welcome Back":"Create Your Account";
+ el("authSubtitle").textContent=login?"Sign in to your SafeSpace account.":"Register to access SafeSpace reporting.";
+ el("loginForm").classList.toggle("hidden",!login);
+ el("registerForm").classList.toggle("hidden",login);
+ el("switchText").textContent=login?"Don't have an account?":"Already have an account?";
+ el("switchButton").textContent=login?"Register":"Login";
+ hideNotice("authNotice");
+}
+function toggleAuthMode(){setAuthMode(authMode==="login"?"register":"login")}
+function showUser(){
+ hideAll();el("userDashboard").classList.remove("hidden");
+ el("userGreeting").textContent=currentUser.displayName||currentUser.email||"My Account";
+ el("profileName").textContent=currentUser.displayName||"Not provided";
+ el("profileEmail").textContent=currentUser.email||"—";
+ userTab("overview",document.querySelector("#userDashboard .sidebtn"));
+ refreshUserReports();
+}
+function showAdmin(){hideAll();el("adminDashboard").classList.remove("hidden");loadAdminReports()}
+function userTab(tab,button){
+ ["overview","submit","myreports","profile"].forEach(t=>el("user"+t.charAt(0).toUpperCase()+t.slice(1)).classList.add("hidden"));
+ const target=el("user"+tab.charAt(0).toUpperCase()+tab.slice(1));if(target)target.classList.remove("hidden");
+ document.querySelectorAll("#userDashboard .sidebtn").forEach(b=>b.classList.remove("active"));if(button)button.classList.add("active");
+ if(tab==="myreports")refreshUserReports();
+}
+function adminTab(filter,button){
+ adminFilter=filter;document.querySelectorAll("#adminDashboard .sidebtn").forEach(b=>b.classList.remove("active"));if(button)button.classList.add("active");
+ el("adminListTitle").textContent=filter==="all"?"All Reports":filter==="pending"?"Pending Reports":"Resolved / Closed Reports";renderAdminReports();
+}
+async function refreshUserReports(){
+ if(!currentUser||!db)return;
+ try{
+  const snap=await db.collection("reports").where("ownerUid","==",currentUser.uid).get();
+  const reports=snap.docs.map(d=>({id:d.id,...d.data()})).sort((a,b)=>(b.createdAt?.seconds||0)-(a.createdAt?.seconds||0));
+  el("userTotal").textContent=reports.length;
+  el("userPending").textContent=reports.filter(r=>r.status==="Pending").length;
+  el("userResolved").textContent=reports.filter(r=>["Resolved","Closed"].includes(r.status)).length;
+  el("myReportsList").innerHTML=reports.length?reports.map(reportCard).join(""):'<div class="empty">You have not submitted any reports yet.</div>';
+ }catch(err){console.error(err);el("myReportsList").innerHTML='<div class="empty">Could not load reports: '+escapeHtml(err.message)+'</div>'}
+}
+function reportCard(r){
+ const safeStatus=(r.status||"Pending").replaceAll(" ","-");
+ return '<article class="report"><div class="report-head"><b>'+escapeHtml(r.reportType||"Report")+'</b><span class="status '+safeStatus+'">'+escapeHtml(r.status||"Pending")+'</span></div><p><b>Date:</b> '+escapeHtml(r.incidentDate||"—")+' &nbsp; <b>Location:</b> '+escapeHtml(r.location||"—")+'</p><p>'+escapeHtml(r.description||"")+'</p><small>Report ID: '+escapeHtml(r.id)+'</small></article>';
+}
+function escapeHtml(value){
+ return String(value??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+}
+async function loadAdminReports(){
+ if(!currentUser||currentUser.uid!==ADMIN_UID)return;
+ hideNotice("adminNotice");
+ el("adminReportsList").innerHTML='<div class="empty">Loading reports...</div>';
+ try{
+  const snap=await db.collection("reports").get();
+  cachedReports=snap.docs.map(d=>({id:d.id,...d.data()})).sort((a,b)=>(b.createdAt?.seconds||0)-(a.createdAt?.seconds||0));
+  el("adminTotal").textContent=cachedReports.length;
+  el("adminPending").textContent=cachedReports.filter(r=>r.status==="Pending").length;
+  el("adminResolved").textContent=cachedReports.filter(r=>["Resolved","Closed"].includes(r.status)).length;
+  renderAdminReports();
+ }catch(err){console.error(err);showNotice("adminNotice","Could not load reports: "+err.message,"error");el("adminReportsList").innerHTML='<div class="empty">Check your Firestore rules and internet connection.</div>'}
+}
+function renderAdminReports(){
+ let list=cachedReports;
+ if(adminFilter==="pending")list=list.filter(r=>r.status==="Pending");
+ if(adminFilter==="resolved")list=list.filter(r=>["Resolved","Closed"].includes(r.status));
+ el("adminReportsList").innerHTML=list.length?list.map(r=>{
+  const statusOptions=["Pending","Under Review","Referred to Counselor","Resolved","Closed"].map(s=>'<option '+(r.status===s?'selected':'')+'>'+s+'</option>').join("");
+  return '<article class="report"><div class="report-head"><b>'+escapeHtml(r.reportType||"Report")+'</b><select aria-label="Update report status" onchange="updateReportStatus(\''+r.id+'\',this.value)">'+statusOptions+'</select></div><p><b>Incident date:</b> '+escapeHtml(r.incidentDate||"—")+' &nbsp; <b>Location:</b> '+escapeHtml(r.location||"—")+'</p><p>'+escapeHtml(r.description||"")+'</p><p><b>Identity:</b> '+(r.identity==="anonymous"?"Hidden":"Identified")+'</p>'+(r.identity==="identified"?'<p><b>Reporter:</b> '+escapeHtml(r.reporterName||"—")+' ('+escapeHtml(r.reporterEmail||"—")+')</p>':'')+'<small>Report ID: '+escapeHtml(r.id)+'</small></article>';
+ }).join(""):'<div class="empty">No reports in this category.</div>';
+}
+async function updateReportStatus(id,status){
+ if(!currentUser||currentUser.uid!==ADMIN_UID){showNotice("adminNotice","Administrator access is required.","error");return}
+ try{await db.collection("reports").doc(id).update({status:status});showNotice("adminNotice","Report status updated.","success");await loadAdminReports()}
+ catch(err){console.error(err);showNotice("adminNotice","Could not update status: "+err.message,"error")}
+}
+async function logout(){try{await auth.signOut();showHome()}catch(err){alert("Could not log out: "+err.message)}}
+function setBusy(id,busy,label){const b=el(id);if(!b)return;b.disabled=busy;b.textContent=busy?"Please wait...":label}
+function initFirebase(){
+ if(!window.firebase){console.error("Firebase scripts did not load.");showAuth("login");showNotice("authNotice","Firebase could not load. Check your internet connection and try again.","error");return}
+ try{
+  if(!firebase.apps.length)firebase.initializeApp(firebaseConfig);
+  auth=firebase.auth();db=firebase.firestore();
+  auth.onAuthStateChanged(user=>{
+   currentUser=user;
+   if(user){if(user.uid===ADMIN_UID)showAdmin();else showUser()}
+  });
+ }catch(err){console.error(err);showAuth("login");showNotice("authNotice","Firebase initialization failed: "+err.message,"error")}
+}
+el("loginForm").addEventListener("submit",async function(event){
+ event.preventDefault();hideNotice("authNotice");
+ if(!auth){showNotice("authNotice","Firebase is not ready. Check your internet connection and reload.","error");return}
+ const email=el("loginEmail").value.trim(),password=el("loginPassword").value;
+ setBusy("loginButton",true,"Login");
+ try{await auth.signInWithEmailAndPassword(email,password)}
+ catch(err){console.error(err);showNotice("authNotice",friendlyAuthError(err),"error")}
+ finally{setBusy("loginButton",false,"Login")}
+});
+el("registerForm").addEventListener("submit",async function(event){
+ event.preventDefault();hideNotice("authNotice");
+ if(!auth){showNotice("authNotice","Firebase is not ready. Check your internet connection and reload.","error");return}
+ const name=el("registerName").value.trim(),email=el("registerEmail").value.trim(),password=el("registerPassword").value;
+ setBusy("registerButton",true,"Create Account");
+ try{const cred=await auth.createUserWithEmailAndPassword(email,password);await cred.user.updateProfile({displayName:name})}
+ catch(err){console.error(err);showNotice("authNotice",friendlyAuthError(err),"error")}
+ finally{setBusy("registerButton",false,"Create Account")}
+});
+el("reportForm").addEventListener("submit",async function(event){
+ event.preventDefault();hideNotice("reportNotice");
+ if(!currentUser||!db){showNotice("reportNotice","Please sign in again before submitting.","error");return}
+ setBusy("submitReportButton",true,"Submitting...");
+ const anonymous=el("anonymousChoice").checked;
+ const data={ownerUid:currentUser.uid,identity:anonymous?"anonymous":"identified",reportType:el("reportType").value,incidentDate:el("incidentDate").value,location:el("reportLocation").value.trim(),description:el("reportDescription").value.trim(),status:"Pending",createdAt:firebase.firestore.FieldValue.serverTimestamp()};
+ if(!anonymous){data.reporterName=currentUser.displayName||"";data.reporterEmail=currentUser.email||""}
+ try{await db.collection("reports").add(data);el("reportForm").reset();showNotice("reportNotice","Your report was submitted successfully.","success");await refreshUserReports()}
+ catch(err){console.error(err);showNotice("reportNotice","Could not submit report: "+err.message,"error")}
+ finally{setBusy("submitReportButton",false,"Submit Report")}
+});
+function friendlyAuthError(err){
+ const code=err&&err.code||"";
+ if(code.includes("invalid-credential")||code.includes("wrong-password")||code.includes("user-not-found"))return "The email or password is incorrect. Check your details and try again.";
+ if(code.includes("email-already-in-use"))return "This email already has an account. Please log in instead.";
+ if(code.includes("weak-password"))return "Please use a password with at least 6 characters.";
+ if(code.includes("invalid-email"))return "Please enter a valid email address.";
+ if(code.includes("operation-not-allowed"))return "Email/Password sign-in is not enabled in Firebase Authentication.";
+ if(code.includes("unauthorized-domain"))return "This preview address is not authorized in Firebase. Add the website's domain in Firebase Authentication > Settings > Authorized domains, or host the site on a supported domain.";
+ if(code.includes("network-request-failed"))return "Network connection failed. Check your internet connection and reload.";
+ return "Login failed: "+(err.message||"Please try again.");
+}
+window.showHome=showHome;window.showAuth=showAuth;window.toggleAuthMode=toggleAuthMode;window.userTab=userTab;window.adminTab=adminTab;window.logout=logout;window.loadAdminReports=loadAdminReports;window.updateReportStatus=updateReportStatus;
+initFirebase();
+})();
+</script>
+</body>
+</html>
